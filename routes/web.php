@@ -11,9 +11,10 @@ Route::get('/about', function () {
 });
 
 Route::get('/tasks', function () {
-    return 'Index for tasks';
+    $veces = 23;
+    return view('index', ['veces' => $veces]);
 });
 
 Route::get('/tasks/{id}', function (int $id) {
-    return $id;
+    return view('show', ['id' => $id]);
 });
